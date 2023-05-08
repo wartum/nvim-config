@@ -1,0 +1,6 @@
+{
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"coc.preferences.formatOnSave": true,
+	"outline.splitCommand": "topleft 30vs"
+}
