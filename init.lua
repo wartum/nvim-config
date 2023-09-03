@@ -17,6 +17,7 @@ vim.call('plug#begin')
   Plug('godlygeek/tabular')
   Plug('kylechui/nvim-surround')
   Plug('m4xshen/autoclose.nvim')
+  Plug('tpope/vim-fugitive')
 vim.call('plug#end')
 
 vim.g.mapleader          = ' '
