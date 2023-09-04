@@ -1,3 +1,5 @@
+require("localconfig")
+
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
   Plug('tpope/vim-commentary')
@@ -49,10 +51,10 @@ vim.keymap.set('n', '<Up>'             , '<C-w>+')
 vim.keymap.set('n', '<Down>'           , '<C-w>-')
 vim.keymap.set('n', 'Q'                , ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<space>s'         , ':source<CR>')
-vim.keymap.set('n', 'E'                , ':e /home/wpietkax/.config/nvim/<CR>')
+vim.keymap.set('n', 'E'                , ':e ' .. HomeDir .. '/.config/nvim/<CR>')
 vim.keymap.set('n', '<Leader>j'        , 'gt')
 vim.keymap.set('n', '<Leader>k'        , 'gT')
-vim.keymap.set('n', '<Leader>p'        , ':CocList diagnostics<CR>')
+vim.keymap.set('n', '<Leader>p'        , ':Telescope diagnostics<CR>')
 vim.keymap.set('n', '<C-s>'            , ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<Leader>]'        , ':cnext<CR>')
 vim.keymap.set('n', '<Leader>['        , ':cprev<CR>')
