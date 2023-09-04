@@ -21,7 +21,3 @@ require("autoclose").setup({
       auto_indent = true,
    },
 })
-
--- workaround for autclose overriding coc settings
-vim.cmd([[inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]])

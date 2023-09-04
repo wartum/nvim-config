@@ -1,10 +1,10 @@
 require('telescope').setup{
     defaults = {
         file_ignore_patterns = {
-            "wwwroot",
-            "obj",
-            "bin",
-            "build",
+            "wwwroot/",
+            "obj/",
+            "bin/",
+            "build/",
         }
     }
 }
