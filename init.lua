@@ -5,6 +5,7 @@ vim.call('plug#begin')
   Plug('tpope/vim-commentary')
   Plug('matze/vim-move')
   Plug('tomasiser/vim-code-dark')
+  Plug('rebelot/kanagawa.nvim')
   Plug('preservim/vim-markdown')
   Plug('nvim-tree/nvim-tree.lua')
   Plug('mfussenegger/nvim-dap')
@@ -20,17 +21,18 @@ vim.call('plug#begin')
   Plug('m4xshen/autoclose.nvim')
   Plug('tpope/vim-fugitive')
 
+ -- LSP Support
   Plug('neovim/nvim-lspconfig')
   Plug('williamboman/mason.nvim')
   Plug('williamboman/mason-lspconfig.nvim')
-
   Plug('hrsh7th/nvim-cmp')
   Plug('hrsh7th/cmp-nvim-lsp')
   Plug('L3MON4D3/LuaSnip')
-
   Plug('VonHeikemen/lsp-zero.nvim', {branch = 'v2.x'})
 vim.call('plug#end')
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader          = ' '
 vim.o.mouse              = ''
 vim.o.exrc               = true

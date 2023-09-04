@@ -16,3 +16,5 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({select = false}),
   }
 })
+
+vim.keymap.set('n', '<Leader>o', ':ClangdSwitchSourceHeader<CR>')

@@ -5,12 +5,32 @@ vim.keymap.set('n', '<F11>', ':DapStepInto<CR>')
 vim.cmd('autocmd BufEnter * :DapLoadLaunchJSON')
 
 local dap = require'dap'
+
 dap.adapters.go = {
   type = 'server',
   port = '9999',
   executable = {
     command = 'dlv',
     args = {'dap', '-l', '127.0.0.1:9999'},
+  }
+}
+
+dap.adapters.cppdbg = {
+  id = 'cppdbg',
+  type = 'executable',
+  command = '/usr/local/bin/lldb-vscode',
+}
+
+dap.configurations.cpp = {
+  {
+    name = "Launch file",
+    type = "cppdbg",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopAtEntry = true,
   }
 }
 
