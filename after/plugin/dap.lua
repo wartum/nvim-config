@@ -15,23 +15,26 @@ dap.adapters.go = {
   }
 }
 
-dap.adapters.cppdbg = {
-  id = 'cppdbg',
-  type = 'executable',
-  command = '/usr/local/bin/lldb-vscode',
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+  executable = {
+    command = HomeDir .. '/.local/share/nvim/mason/bin/codelldb',
+    args = {"--port", "${port}"},
+  }
 }
 
 dap.configurations.cpp = {
   {
     name = "Launch file",
-    type = "cppdbg",
+    type = "codelldb",
     request = "launch",
     program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
     cwd = '${workspaceFolder}',
-    stopAtEntry = true,
-  }
+    stopOnEntry = false,
+  },
 }
 
 local dap, dapui =require('dap'),require('dapui')

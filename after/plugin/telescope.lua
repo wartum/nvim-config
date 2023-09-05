@@ -5,6 +5,7 @@ require('telescope').setup{
             "obj/",
             "bin/",
             "build/",
+            "target/"
         }
     }
 }
