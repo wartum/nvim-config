@@ -2,7 +2,6 @@ require("localconfig")
 require("plugins")
 
 vim.g.mapleader          = ' '
-vim.o.mouse              = ''
 vim.o.exrc               = true
 vim.o.splitright         = true
 vim.o.splitbelow         = true
@@ -31,14 +30,14 @@ vim.keymap.set('n', '<Leader><Leader>t', ':tabnew<CR>:term<CR>')
 
 vim.keymap.set('n', '<Leader>p'        , ':Telescope diagnostics<CR>')
 vim.keymap.set('n', '<C-s>'            , ':Telescope lsp_document_symbols<CR>')
-vim.keymap.set('n', '<Leader>]'        , ':cnext<CR>')
-vim.keymap.set('n', '<Leader>['        , ':cprev<CR>')
+vim.keymap.set('n', '<C-e>'            , ':cnext<CR>')
+vim.keymap.set('n', '<C-q>'            , ':cprev<CR>')
 
 vim.keymap.set('n', '<Leader>tb'       , ':Tabularize //l0r1<Left><Left><Left><Left><Left>')
-vim.keymap.set('v', '<Leader>tb', ':Tabularize //l0r1<Left><Left><Left><Left><Left>')
-vim.keymap.set('v', 'J'         , '<Esc>')
-vim.keymap.set('i', 'jk'        , '<Esc>')
-vim.keymap.set('t', 'jk'        , '<C-\\><C-n>')
+vim.keymap.set('v', '<Leader>tb'       , ':Tabularize //l0r1<Left><Left><Left><Left><Left>')
+vim.keymap.set('v', 'J'                , '<Esc>')
+vim.keymap.set('i', 'jk'               , '<Esc>')
+vim.keymap.set('t', 'jk'               , '<C-\\><C-n>')
 
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.api.nvim_create_autocmd({"BufWritePre"}, {
