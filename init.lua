@@ -1,17 +1,16 @@
 require("localconfig")
 require("plugins")
 
-vim.g.mapleader       = ' '
-vim.o.exrc            = true
-vim.o.splitright      = true
-vim.o.splitbelow      = true
-vim.o.wrap            = false
-vim.o.list            = true
-vim.o.number          = true
-vim.o.relativenumber  = true
-vim.o.ignorecase      = true
-vim.o.tabstop         = 8
-vim.opt.termguicolors = true
+vim.g.mapleader          = ' '
+vim.o.exrc               = true
+vim.o.splitright         = true
+vim.o.splitbelow         = true
+vim.o.list               = true
+vim.o.number             = true
+vim.o.relativenumber     = true
+vim.o.ignorecase         = true
+vim.o.laststatus         = 1
+vim.opt.termguicolors    = true
 
 vim.keymap.set('n', '<Leader>cd', ':cd %:h/<CR>')
 vim.keymap.set('n', '<Leader>w', ':w<CR>')
