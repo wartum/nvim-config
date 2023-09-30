@@ -6,7 +6,7 @@ vim.o.exrc            = true
 vim.o.splitright      = true
 vim.o.splitbelow      = true
 vim.o.wrap            = false
-vim.o.list            = true
+vim.o.list            = false
 vim.o.number          = true
 vim.o.relativenumber  = true
 vim.o.ignorecase      = true
@@ -22,7 +22,7 @@ vim.keymap.set('n', '<Right>', '<C-w>>')
 vim.keymap.set('n', '<Left>', '<C-w><')
 vim.keymap.set('n', '<Up>', '<C-w>+')
 vim.keymap.set('n', '<Down>', '<C-w>-')
-vim.keymap.set('n', 'Q', ':NERDTreeToggle<CR>')
+vim.keymap.set('n', 'Q', ':e .<CR>')
 vim.keymap.set('n', 'E', ':e ' .. HomeDir .. '/.config/nvim/<CR>')
 vim.keymap.set('n', '<Leader>j', 'gt')
 vim.keymap.set('n', '<Leader>k', 'gT')
@@ -41,7 +41,6 @@ vim.keymap.set('v', 'J', '<Esc>')
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('t', 'jk', '<C-\\><C-n>')
 
-vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[mark b | %s/\s\+$//e | norm 'b]],

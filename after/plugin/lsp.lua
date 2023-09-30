@@ -15,7 +15,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
   mapping = {
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
   }
 })
 
