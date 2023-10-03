@@ -4,9 +4,9 @@ require('telescope').setup{
             "wwwroot/",
             "obj/",
             "bin/",
-            "build/",
             "target/",
             "External/",
+            "Tools/",
             "corpus/"
         }
     }
