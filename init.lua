@@ -30,8 +30,6 @@ vim.keymap.set('n', '<C-J>', ':tabmove +1<CR>')
 vim.keymap.set('n', '<C-K>', ':tabmove -1<CR>')
 vim.keymap.set('n', '<Leader><Leader>t', ':tabnew<CR>:term<CR>')
 
-vim.keymap.set('n', '<Leader>p', ':Telescope diagnostics<CR>')
-vim.keymap.set('n', '<C-s>', ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<C-e>', ':cnext<CR>')
 vim.keymap.set('n', '<C-q>', ':cprev<CR>')
 
