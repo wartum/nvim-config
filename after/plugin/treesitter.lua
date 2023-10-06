@@ -18,8 +18,8 @@ require 'nvim-treesitter.configs'.setup {
         -- You can use the capture groups defined in textobjects.scm
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
-        ["iP"] = "@parameter.inner",
-        ["aP"] = "@parameter.outer",
+        ["ip"] = "@parameter.inner",
+        ["ap"] = "@parameter.outer",
       },
       include_surrounding_whitespace = true,
     },

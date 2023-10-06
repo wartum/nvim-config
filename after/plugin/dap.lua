@@ -1,9 +1,10 @@
+local dap = require 'dap'
+
 vim.keymap.set('n', '<F5>', ':DapContinue<CR>')
 vim.keymap.set('n', '<F9>', ':DapToggleBreakpoint<CR>')
 vim.keymap.set('n', '<F10>', ':DapStepOver<CR>')
 vim.keymap.set('n', '<F11>', ':DapStepInto<CR>')
-
-local dap = require 'dap'
+vim.keymap.set('n', '<F3>', function() dap.goto_(vim.api.nvim_win_get_cursor(0)[1]) end, {})
 
 dap.adapters.go = {
   type = 'server',
