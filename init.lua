@@ -38,8 +38,3 @@ vim.keymap.set('v', '<Leader>tb', ':Tabularize //l0r1<Left><Left><Left><Left><Le
 vim.keymap.set('v', 'J', '<Esc>')
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('t', 'jk', '<C-\\><C-n>')
-
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*" },
-  command = [[mark b | %s/\s\+$//e | norm 'b]],
-})
