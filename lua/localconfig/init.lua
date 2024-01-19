@@ -1,1 +1,1 @@
-HomeDir="/home/wpietkax"
+HomeDir="/home/wojtek"
