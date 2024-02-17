@@ -6,6 +6,8 @@ vim.keymap.set('n', '<F6>', ':DapStepOver<CR>')
 vim.keymap.set('n', '<F7>', ':DapStepInto<CR>')
 vim.keymap.set('n', '<F3>', function() dap.goto_(vim.api.nvim_win_get_cursor(0)[1]) end, {})
 
+-- C/C++
+----------
 dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",
@@ -15,6 +17,34 @@ dap.adapters.codelldb = {
   }
 }
 
+dap.configurations.c = {
+  {
+    name = "Launch file",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+  },
+}
+
+dap.configurations.cpp = {
+  {
+    name = "Launch file",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+  },
+}
+
+-- Go
+----------
 dap.adapters.dlv = {
   type = 'server',
   port = '9999',
@@ -24,6 +54,19 @@ dap.adapters.dlv = {
   }
 }
 
+dap.configurations.go = {
+  {
+    name = "Launch file",
+    type = "dlv",
+    request = "launch",
+    program = "${file}",
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+  },
+}
+
+-- Python
+----------
 dap.adapters.python = function(cb, config)
   if config.request == 'attach' then
     ---@diagnostic disable-next-line: undefined-field
@@ -49,42 +92,6 @@ dap.adapters.python = function(cb, config)
   end
 end
 
-dap.configurations.cpp = {
-  {
-    name = "Launch file",
-    type = "codelldb",
-    request = "launch",
-    program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    end,
-    cwd = '${workspaceFolder}',
-    stopOnEntry = false,
-  },
-}
-
-dap.configurations.c = {
-  {
-    name = "Launch file",
-    type = "codelldb",
-    request = "launch",
-    program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    end,
-    cwd = '${workspaceFolder}',
-    stopOnEntry = false,
-  },
-}
-
-dap.configurations.go = {
-  {
-    name = "Launch file",
-    type = "dlv",
-    request = "launch",
-    program = "${file}",
-    cwd = '${workspaceFolder}',
-    stopOnEntry = false,
-  },
-}
 
 dap.configurations.python = {
   {
@@ -102,6 +109,26 @@ dap.configurations.python = {
         return '/usr/bin/python'
       end
     end;
+  },
+}
+
+-- C#
+----------
+dap.adapters.coreclr = {
+  type = 'executable',
+  command = HomeDir .. '\\appdata\\Local\\nvim-data\\mason\\bin\\netcoredbg.cmd',
+  args = {'--interpreter=vscode'}
+}
+
+dap.configurations.cs = {
+  {
+    type = "coreclr",
+    name = "launch - netcoredbg",
+    request = "launch",
+    console = "integratedTerminal",
+    program = function()
+        return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+    end,
   },
 }
 
