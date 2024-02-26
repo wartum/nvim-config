@@ -12,7 +12,7 @@ dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",
   executable = {
-    command = HomeDir .. '/.local/share/nvim/mason/bin/codelldb',
+    command = MasonDir .. '/bin/codelldb',
     args = { "--port", "${port}" },
   }
 }
@@ -84,7 +84,7 @@ dap.adapters.python = function(cb, config)
   else
     cb({
       type = 'executable',
-      command = HomeDir .. '/.local/share/nvim/mason/bin/debugpy-adapter',
+      command = MasonDir .. '/bin/debugpy-adapter',
       options = {
         source_filetype = 'python',
       },
@@ -116,7 +116,7 @@ dap.configurations.python = {
 ----------
 dap.adapters.coreclr = {
   type = 'executable',
-  command = HomeDir .. '\\appdata\\Local\\nvim-data\\mason\\bin\\netcoredbg.cmd',
+  command = MasonDir .. '/bin/netcoredbg.sh',
   args = {'--interpreter=vscode'}
 }
 

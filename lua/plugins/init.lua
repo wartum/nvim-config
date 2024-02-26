@@ -2,6 +2,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug('tpope/vim-commentary')
 Plug('matze/vim-move')
+Plug('morhetz/gruvbox')
 Plug('tomasiser/vim-code-dark')
 Plug('rebelot/kanagawa.nvim')
 Plug('preservim/vim-markdown')

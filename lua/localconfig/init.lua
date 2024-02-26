@@ -1,2 +1,3 @@
-HomeDir = "c:\\users\\wojci"
-ConfigDir = HomeDir .. "\\appdata\\local\\nvim"
+HomeDir = "/home/wojtek"
+ConfigDir = HomeDir .. "/.config/nvim"
+MasonDir = HomeDir .. "/.local/share/nvim/mason"
