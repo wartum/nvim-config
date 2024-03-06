@@ -7,7 +7,8 @@ require('telescope').setup {
             "target/",
             "External/",
             "Tools/",
-            "corpus/"
+            "corpus/",
+            "build/"
         }
     }
 }
