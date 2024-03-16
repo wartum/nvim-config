@@ -1,5 +1,6 @@
-require("localconfig")
+require("machine_config")
 require("plugins")
+require("filetype_specific")
 
 vim.g.mapleader       = ' '
 vim.o.exrc            = true
@@ -11,7 +12,6 @@ vim.o.number          = true
 vim.o.relativenumber  = true
 vim.o.ignorecase      = true
 vim.o.tabstop         = 8
-vim.opt.termguicolors = true
 
 vim.keymap.set('n', '<Leader>cd', ':cd %:h/<CR>')
 vim.keymap.set('n', '<Leader>w', ':w<CR>')
