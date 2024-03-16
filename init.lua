@@ -11,7 +11,10 @@ vim.o.list           = true
 vim.o.number         = true
 vim.o.relativenumber = true
 vim.o.ignorecase     = true
+vim.o.expandtab      = true
 vim.o.tabstop        = 8
+vim.o.softtabstop    = 8
+vim.o.shiftwidth     = 4
 
 vim.keymap.set('n', '<Leader>cd', ':cd %:h/<CR>')
 vim.keymap.set('n', '<Leader>w' , ':w<CR>')
