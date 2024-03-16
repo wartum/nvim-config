@@ -1,32 +1,15 @@
-local function exists(file)
+local function isdir(file)
+  file = file.."/"
   local ok, err, code = os.rename(file, file)
-  if not ok then
-    if code == 13 then
-      return true
-    end
+  if not ok and code == 13 then
+    return true
   end
   return ok, err
 end
 
-local function isdir(path)
-  return exists(path.."/")
-end
-
-local possible_homes = {
-  "/home/wojtek",
-  "/home/wpietkax",
-  "c:\\Users\\wojci"
-}
-
-HomeDir   = ""
+HomeDir   = os.getenv("HOME")
 ConfigDir = ""
 MasonDir  = ""
-
-for _, dir in ipairs(possible_homes) do
-  if (isdir(dir)) then
-    HomeDir = dir
-  end
-end
 
 if isdir(HomeDir.."/.config/nvim") then
   ConfigDir = HomeDir .. "/.config/nvim"
