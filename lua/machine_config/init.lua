@@ -22,9 +22,9 @@ HomeDir   = ""
 ConfigDir = ""
 MasonDir  = ""
 
-for _, h in ipairs(possible_homes) do
-  if (isdir(h)) then
-    HomeDir = "/home/wojtek"
+for _, dir in ipairs(possible_homes) do
+  if (isdir(dir)) then
+    HomeDir = dir
   end
 end
 
