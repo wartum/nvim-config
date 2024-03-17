@@ -12,23 +12,23 @@ lsp_zero.set_sign_icons({
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
-    vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
-        severity_sort = true
-    }
+  vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    severity_sort = true
+  }
 )
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-     'clangd',
-     'cmake',
-     'cssls',
-     'gopls',
-     'html',
-     'lua_ls',
-     'rust_analyzer',
+    'clangd',
+    'cmake',
+    'cssls',
+    'gopls',
+    'html',
+    'lua_ls',
+    'rust_analyzer',
   },
   handlers = {
     lsp_zero.default_setup,
@@ -48,6 +48,7 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
+    { name = 'buffer' },
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>']     = cmp.mapping.scroll_docs(-4),

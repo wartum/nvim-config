@@ -1,16 +1,16 @@
 require('telescope').setup {
-    defaults = {
-        file_ignore_patterns = {
-            "wwwroot/",
-            "obj/",
-            "bin/",
-            "target/",
-            "External/",
-            "Tools/",
-            "corpus/",
-            "build/"
-        }
+  defaults = {
+    file_ignore_patterns = {
+      "wwwroot/",
+      "obj/",
+      "bin/",
+      "target/",
+      "External/",
+      "Tools/",
+      "corpus/",
+      "build/"
     }
+  }
 }
 
 local builtin = require('telescope.builtin')
