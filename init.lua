@@ -1,6 +1,6 @@
-require("machine_config")
-require("plugins")
-require("filetype_specific")
+require "machine_config"
+require "plugins"
+require "filetype_specific"
 
 vim.g.mapleader      = ' '
 vim.o.exrc           = false

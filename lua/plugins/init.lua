@@ -30,12 +30,12 @@ Plug('preservim/vim-markdown')
 Plug('tpope/vim-fugitive')
 
 -- LSP
-Plug('L3MON4D3/LuaSnip')
-Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v2.x' })
+Plug('neovim/nvim-lspconfig')
+Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-path')
-Plug('hrsh7th/nvim-cmp')
-Plug('neovim/nvim-lspconfig')
+Plug('L3MON4D3/LuaSnip')
+Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v3.x' })
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
 

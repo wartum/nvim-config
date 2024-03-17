@@ -1,4 +1,4 @@
-DefaultBranch = "master"
+DefaultBranch = "HEAD"
 
 function DiffHere(branch)
   vim.cmd(":Git difftool -y " .. branch .. " %")
