@@ -2,6 +2,7 @@ require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
       "wwwroot/",
+      ".git",
       "obj/",
       "bin/",
       "target/",
