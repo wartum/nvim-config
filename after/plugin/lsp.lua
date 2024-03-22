@@ -29,6 +29,7 @@ require('mason-lspconfig').setup({
     'html',
     'lua_ls',
     'rust_analyzer',
+    'pylsp',
   },
   handlers = {
     lsp_zero.default_setup,
