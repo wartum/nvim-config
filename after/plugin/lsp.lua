@@ -22,14 +22,15 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'clangd',
-    'cmake',
-    'cssls',
-    'gopls',
     'html',
+    'cssls',
+    'cmake',
+    'clangd',
+    'gopls',
     'lua_ls',
     'rust_analyzer',
     'pylsp',
+    'omnisharp'
   },
   handlers = {
     lsp_zero.default_setup,
