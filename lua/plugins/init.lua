@@ -19,10 +19,8 @@ Plug('m4xshen/autoclose.nvim')
 Plug('matze/vim-move')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.2' })
-Plug('nvim-telescope/telescope-fzf-native.nvim', { run =
-    'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
-  })
+Plug('nvim-telescope/telescope.nvim', { ['branch'] = '0.1.x' })
+Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 Plug('tpope/vim-commentary')
 Plug('preservim/vim-markdown')
 
@@ -35,9 +33,12 @@ Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-path')
 Plug('L3MON4D3/LuaSnip')
-Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v3.x' })
+Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x' })
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
+Plug('github/copilot.vim')
+Plug('CopilotC-Nvim/CopilotChat.nvim', { ['branch'] = 'canary' })
+Plug('nvim-lua/plenary.nvim')
 
 -- DAP
 Plug('mfussenegger/nvim-dap')
