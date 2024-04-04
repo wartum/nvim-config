@@ -41,5 +41,6 @@ Plug('williamboman/mason.nvim')
 
 -- DAP
 Plug('mfussenegger/nvim-dap')
+Plug('nvim-neotest/nvim-nio')
 Plug('rcarriga/nvim-dap-ui')
 vim.call('plug#end')
