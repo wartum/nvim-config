@@ -2,6 +2,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Dependencies
 Plug('nvim-lua/plenary.nvim')
+Plug('nvim-neotest/nvim-nio')
 
 -- Good looks
 Plug('morhetz/gruvbox')
@@ -36,12 +37,12 @@ Plug('L3MON4D3/LuaSnip')
 Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x' })
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
+
+-- Copilot
 Plug('github/copilot.vim')
 Plug('CopilotC-Nvim/CopilotChat.nvim', { ['branch'] = 'canary' })
-Plug('nvim-lua/plenary.nvim')
 
 -- DAP
 Plug('mfussenegger/nvim-dap')
-Plug('nvim-neotest/nvim-nio')
 Plug('rcarriga/nvim-dap-ui')
 vim.call('plug#end')
