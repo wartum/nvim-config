@@ -1,5 +1,21 @@
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed = { 'vim', 'vimdoc', 'json', 'lua', 'c', 'cpp', 'cmake', 'go', 'rust', 'html', 'css', 'javascript' },
+  ensure_installed = {
+    'vimdoc',
+    'json',
+    'yaml',
+    'markdown',
+    'html',
+    'css',
+    'javascript',
+    'vim',
+    'lua',
+    'c',
+    'cpp',
+    'cmake',
+    'c_sharp',
+    'go',
+    'rust',
+  },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
