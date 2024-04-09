@@ -15,6 +15,7 @@ vim.o.expandtab      = true
 vim.o.tabstop        = 4
 vim.o.softtabstop    = 4
 vim.o.shiftwidth     = 4
+vim.cmd('language en_US.UTF-8')
 
 vim.keymap.set('n', '<Leader>cd', ':cd %:h/<CR>')
 vim.keymap.set('n', '<Leader>w' , ':w<CR>')
