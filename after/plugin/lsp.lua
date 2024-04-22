@@ -4,6 +4,17 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+require('lspconfig').clangd.setup {
+  on_attach = function(client, bufnr)
+    lsp_zero.default_keymaps({buffer = bufnr})
+  end,
+  capabilities = lsp_zero.capabilities,
+  cmd = {
+    'clangd',
+    '--offset-encoding=utf-16'
+  }
+}
+
 lsp_zero.set_sign_icons({
   error = '💀',
   warn = '🎭',
