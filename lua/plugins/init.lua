@@ -38,10 +38,6 @@ Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x' })
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
 
--- Copilot
-Plug('github/copilot.vim')
-Plug('CopilotC-Nvim/CopilotChat.nvim', { ['branch'] = 'canary' })
-
 -- DAP
 Plug('mfussenegger/nvim-dap')
 Plug('rcarriga/nvim-dap-ui')
